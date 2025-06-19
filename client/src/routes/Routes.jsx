@@ -11,11 +11,8 @@ import ManageUsers from "../pages/Dashboard/Admin/ManageUsers";
 import Profile from "../pages/Dashboard/Common/Profile";
 import Statistics from "../pages/Dashboard/Common/Statistics";
 import MainLayout from "../layouts/MainLayout";
-<<<<<<< HEAD
-=======
 import Files from "../components/Dashboard/Sidebar/Files";
-import AddEmployees from "../components/Dashboard/Sidebar/addEmployees";
->>>>>>> 8ea7cac (Initial commit)
+
 
 
 
@@ -50,8 +47,6 @@ export const router = createBrowserRouter([
         ),
       },
 
-      
-
       {
         path: "manage-users",
         element: (
@@ -60,27 +55,15 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-<<<<<<< HEAD
-=======
       {
-        path: "files",
+        path: "Files",
         element: (
           <PrivateRoute>
-            <Files/>
+          <Files/>
           </PrivateRoute>
         ),
       },
-      {
-        path: "add-employees",
-        element: (
-          <PrivateRoute>
-          <AddEmployees/>
-          </PrivateRoute>
-        ),
-      },
->>>>>>> 8ea7cac (Initial commit)
-   
-   
+
       {
         path: "profile",
         element: (

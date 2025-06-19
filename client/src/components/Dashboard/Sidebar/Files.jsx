@@ -10,64 +10,8 @@ const pdfData = [
     name: "Amir Hossain",
     title: "Foreman",
     group: "Airport N & S",
-    file: "/public/Iqama_4012/407703.pdf",
+    file: "https://drive.google.com/file/d/1yvCeguxZt0vdrpRpQa1mtkx2DCrpqF8T/view?usp=drive_link",
     description: "this one  only Iqama.",
-  },
-  {
-    id: "401931",
-    name: "Hilal Kamal ",
-    title: "Foreman",
-    group: "Airport N & S",
-    file: "/public/Iqama_4012/401931.pdf",
-    description: "this one only Iqama.",
-  },
-  {
-    id: "407276",
-    name: "BAYEJID MIAH ",
-    title: "Gardener",
-    group: "Airport N & S",
-    file: "/public/Iqama_4012/407276.pdf",
-    description: "this one only Iqama.",
-  },
-  {
-    id: "407277",
-    name: "MD ALKUS",
-    title: "Gardener",
-    group: "Airport N & S",
-    file: "/public/Iqama_4012/407277.pdf",
-    description: "this one only Iqama.",
-  },
-  {
-    id: "407411",
-    name: "PRASENJIT DAS",
-    title: "Gardener",
-    group: "Airport N & S",
-    file: "/public/Iqama_4012/407411.pdf",
-    description: "this one only Iqama.",
-  },
-  {
-    id: "407611",
-    name: "Mohammad Sakil Bhuiyan",
-    title: "Labour",
-    group: "Airport N & S",
-    file: "/public/Iqama_4012/407611.pdf",
-    description: "this one only Iqama.",
-  },
-  {
-    id: "401815",
-    name: "Hassan Nawaz	",
-    title: "Technician",
-    group: "Airport N & S",
-    file: "/public/Iqama_4012/401815.pdf",
-    description: "this one only Iqama.",
-  },
-  {
-    id: "408250",
-    name: "Akram Hossan		",
-    title: "Labour",
-    group: "Airport N & S",
-    file: "/public/Iqama_4012/408250.pdf",
-    description: "this one only Iqama.",
   },
 ];
 
@@ -163,17 +107,11 @@ const Files = () => {
                     href={file.file}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-2 py-1  hover:bg-green-500 text-black rounded border  text-xs"
+                    className="px-2 py-1  hover:bg-green-500 text-black rounded border  text-sm"
                   >
                     <MdOutlineRemoveRedEye />
                   </a>
-                  <a
-                    href={file.file}
-                    download
-                    className="px-2 py-1 hover:bg-green-500 text-black rounded  border text-xs"
-                  >
-                    <FaArrowTurnDown />
-                  </a>
+                 
                 </td>
               </tr>
             ))}
