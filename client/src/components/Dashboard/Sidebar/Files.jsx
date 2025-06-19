@@ -1,10 +1,65 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { FaArrowTurnDown } from "react-icons/fa6";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 
 const pdfData = [
+  {
+    id: "407703",
+    name: "Abdul Hakim Omar Al-Kalde",
+    title: "Project Manager",
+    group: "MANAGMENT",
+    file: "",
+    description: "ID  For Abdul Hakim Omar Al-Kalde ",
+    status: "N/A",
+  },
+  {
+    id: "407703",
+    name: "Abdul Hakim Omar Al-Kalde",
+    title: "Project Manager",
+    group: "MANAGMENT",
+    file: "",
+    description: "Job Offer  For Abdul Hakim Omar Al-Kalde ",
+    status: "N/A",
+  },
+  {
+    id: "407703",
+    name: "Abdul Hakim Omar Al-Kalde",
+    title: "Project Manager",
+    group: "MANAGMENT",
+    file: "",
+    description: "Joining from For Abdul Hakim Omar Al-Kalde ",
+    status: "N/A",
+  },
+  {
+    id: "407703",
+    name: "Abdul Hakim Omar Al-Kalde",
+    title: "Project Manager",
+    group: "MANAGMENT",
+    file: "",
+    description: "Cv For Abdul Hakim Omar Al-Kalde ",
+    status: "N/A",
+  },
+
+  {
+    id: "401798",
+    name: "Shoeib Abou Zeid Mahmoud Awad",
+    title: "Operation Manager",
+    group: "MANAGMENT",
+    file: "https://drive.google.com/file/d/10hpXcpAfxvaA38QVkoUR7hKeJRHTc_UB/view?usp=sharing",
+    description: "Passprot for Engr. Shoeib Abou Zeid Mahmoud Awad",
+    status: "A/V",
+  },
+  {
+    id: "401798",
+    name: "Shoeib Abou Zeid Mahmoud Awad",
+    title: "Operation Manager",
+    group: "MANAGMENT",
+    file: "https://drive.google.com/file/d/10hpXcpAfxvaA38QVkoUR7hKeJRHTc_UB/view?usp=sharing",
+    description: "Iqama for Engr. Shoeib Abou Zeid Mahmoud Awad",
+    status: "N/A",
+  },
+
   {
     id: "407703",
     name: "Amir Hossain",
@@ -12,6 +67,43 @@ const pdfData = [
     group: "Airport N & S",
     file: "https://drive.google.com/file/d/1yvCeguxZt0vdrpRpQa1mtkx2DCrpqF8T/view?usp=drive_link",
     description: "this one  only Iqama.",
+    status: "A/V",
+  },
+  {
+    id: "405406",
+    name: "ANTONIO JR ENARIO ",
+    title: "Supervisor Nursery",
+    group: "NURSERY",
+    file: "https://drive.google.com/file/d/1-nNd5dVsq3wWt9xnsr473NSzeWDcpPfd/view?usp=sharing",
+    description: "Iqama for ANTONIO JR ENARIO.",
+    status: "A/V",
+  },
+  {
+    id: "405406",
+    name: "ANTONIO JR ENARIO ",
+    title: "Supervisor Nursery",
+    group: "NURSERY",
+    file: "",
+    description: "Joining  for ANTONIO JR ENARIO.",
+    status: "N/A",
+  },
+  {
+    id: "405406",
+    name: "ANTONIO JR ENARIO ",
+    title: "Supervisor Nursery",
+    group: "NURSERY",
+    file: "https://drive.google.com/file/d/1-nNd5dVsq3wWt9xnsr473NSzeWDcpPfd/view?usp=sharing",
+    description: "Job Offfer for ANTONIO JR ENARIO.",
+    status: "N/A",
+  },
+  {
+    id: "405406",
+    name: "ANTONIO JR ENARIO ",
+    title: "Supervisor Nursery",
+    group: "NURSERY",
+    file: "https://drive.google.com/file/d/1-nNd5dVsq3wWt9xnsr473NSzeWDcpPfd/view?usp=sharing",
+    description: "CV for ANTONIO JR ENARIO.",
+    status: "N/A",
   },
 ];
 
@@ -93,7 +185,7 @@ const Files = () => {
           </thead>
           <tbody>
             {currentData.map((file, index) => (
-              <tr key={file.id} className="hover:bg-gray-50">
+              <tr key={file.id} className="hover:bg-gray-50 text-gray-600">
                 <td className="p-2 border text-center">
                   {(currentPage - 1) * itemsPerPage + index + 1}
                 </td>
@@ -111,7 +203,17 @@ const Files = () => {
                   >
                     <MdOutlineRemoveRedEye />
                   </a>
-                 
+                </td>
+                <td
+                  className={`p-2 border text-center text-sm ${
+                    file.status === "N/A"
+                      ? "bg-red-500 text-white text-sm"
+                      : file.status === "A/V"
+                      ? "bg-emerald-500 text-white" 
+                      : ""
+                  }`}
+                >
+                  {file.status}
                 </td>
               </tr>
             ))}
