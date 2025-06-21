@@ -50,6 +50,7 @@ async function run() {
   try {
     const db = client.db("EmployessDB");
     const usersCollection = db.collection("users");
+    const FilesCollection = db.collection("filesPdf");
     const EmplyeesDateCollection = db.collection("EmplyeesDate");
     const EmplyeesCollection = db.collection("Emplyees");
 
@@ -122,6 +123,18 @@ async function run() {
 
     app.get("/Emplyees", async (req, res) => {
       const result = await usersCollection.find().limit(20).toArray();
+      res.send(result);
+    });
+
+
+    app.get('/users', async (req, res) => {
+      const result = await usersCollection.find().toArray()
+      res.send(result)
+    })
+
+
+    app.get("/filesPdf", async (req, res) => {
+      const result = await FilesCollection.find().toArray();
       res.send(result);
     });
 
