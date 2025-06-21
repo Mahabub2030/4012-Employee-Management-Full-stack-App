@@ -55,8 +55,99 @@ const pdfData = [
     name: "Shoeib Abou Zeid Mahmoud Awad",
     title: "Operation Manager",
     group: "MANAGMENT",
-    file: "https://drive.google.com/file/d/10hpXcpAfxvaA38QVkoUR7hKeJRHTc_UB/view?usp=sharing",
+    file: "https://drive.google.com/file/d/1CjrJemtr1DNJZxL5A2ytuy5RitUaR5ob/view?usp=drive_link",
     description: "Iqama for Engr. Shoeib Abou Zeid Mahmoud Awad",
+    status: "A/V",
+  },
+  {
+    id: "401798",
+    name: "Shoeib Abou Zeid Mahmoud Awad",
+    title: "Operation Manager",
+    group: "MANAGMENT",
+    file: "",
+    description: "Joining from for Engr. Shoeib Abou Zeid Mahmoud Awad",
+    status: "N/A",
+  },
+  {
+    id: "401798",
+    name: "Shoeib Abou Zeid Mahmoud Awad",
+    title: "Operation Manager",
+    group: "MANAGMENT",
+    file: "",
+    description: "Job for Engr. Shoeib Abou Zeid Mahmoud Awad",
+    status: "N/A",
+  },
+  {
+    id: "401798",
+    name: "Shoeib Abou Zeid Mahmoud Awad",
+    title: "Operation Manager",
+    group: "MANAGMENT",
+    file: "",
+    description: "CV for Engr. Shoeib Abou Zeid Mahmoud Awad",
+    status: "N/A",
+  },
+
+  {
+    id: "405721",
+    name: "Ashraf Ahmed Abdulhadi",
+    title: "Project Coordinator",
+    group: "MANAGMENT",
+    file: "https://drive.google.com/file/d/1MT75u3FnDT4W4GDNz2LEbsb0sM1d8CZX/view?usp=drive_link",
+    description: "Iqama for Engr. Ashraf Ahmed Abdulhadi",
+    status: "A/V",
+  },
+  {
+    id: "405721",
+    name: "Ashraf Ahmed Abdulhadi",
+    title: "Project Coordinator",
+    group: "MANAGMENT",
+    file: "https://drive.google.com/file/d/1dVVw7_8laQJCUS-cdUfjOJ5pLVIfLc2_/view?usp=drive_link",
+    description: "Passprot for Engr. Ashraf Ahmed Abdulhadi",
+    status: "A/V",
+  },
+  {
+    id: "405721",
+    name: "Ashraf Ahmed Abdulhadi",
+    title: "Project Coordinator",
+    group: "MANAGMENT",
+    file: "https://drive.google.com/file/d/1dVVw7_8laQJCUS-cdUfjOJ5pLVIfLc2_/view?usp=drive_link",
+    description: "Job Offer for Engr. Ashraf Ahmed Abdulhadi",
+    status: "N/A",
+  },
+  {
+    id: "405721",
+    name: "Ashraf Ahmed Abdulhadi",
+    title: "Project Coordinator",
+    group: "MANAGMENT",
+    file: "https://drive.google.com/file/d/1dVVw7_8laQJCUS-cdUfjOJ5pLVIfLc2_/view?usp=drive_link",
+    description: "CV for Engr. Ashraf Ahmed Abdulhadi",
+    status: "N/A",
+  },
+  {
+    id: "403698",
+    name: "Ahmed Al-Dossary",
+    title: "Project Administrator",
+    group: "MANAGMENT",
+    file: "",
+    description: "CV for Ahmed Al-Dossary",
+    status: "N/A",
+  },
+  {
+    id: "403698",
+    name: "Ahmed Al-Dossary",
+    title: "Project Administrator",
+    group: "MANAGMENT",
+    file: "",
+    description: "JoB Offcer for Ahmed Al-Dossary",
+    status: "N/A",
+  },
+  {
+    id: "403698",
+    name: "Ahmed Al-Dossary",
+    title: "Project Administrator",
+    group: "MANAGMENT",
+    file: "",
+    description: "JoB Offcer for Ahmed Al-Dossary",
     status: "N/A",
   },
 
@@ -111,7 +202,7 @@ const Files = () => {
   const [search, setSearch] = useState("");
   const [groupFilter, setGroupFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20;
+  const itemsPerPage = 15;
 
   const groups = ["All", ...new Set(pdfData.map((item) => item.group))];
 
@@ -119,6 +210,9 @@ const Files = () => {
     const matchesSearch =
       item.name.toLowerCase().includes(search.toLowerCase()) ||
       item.id.includes(search);
+      item.description.includes(search);
+      item.title.includes(search);
+      item.group.includes(search);
     const matchesGroup = groupFilter === "All" || item.group === groupFilter;
     return matchesSearch && matchesGroup;
   });
