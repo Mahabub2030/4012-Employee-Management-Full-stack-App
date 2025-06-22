@@ -48,11 +48,11 @@ const client = new MongoClient(uri, {
 });
 async function run() {
   try {
-    const db = client.db("EmployessDB");
+    const db = client.db("employee-managment");
     const usersCollection = db.collection("users");
-    const FilesCollection = db.collection("filesPdf");
-    const EmplyeesDateCollection = db.collection("EmplyeesDate");
-    const EmplyeesCollection = db.collection("Emplyees");
+    const filesPdfCollection = db.collection("filesPdf");
+    const EmplyeesDateCollection = db.collection("employeesData");
+    const EmplyeesCollection = db.collection("employees");
 
     // save or update a user in db
     app.post("/users/:email", async (req, res) => {
@@ -114,15 +114,15 @@ async function run() {
       res.send(result);
     });
 
-    app.post("/Emplyees", async (req, res) => {
+    app.post("/emplyees", async (req, res) => {
       const Emplyees = req.body;
       const result = await EmplyeesCollection.insertOne(Emplyees);
       console.log("Received Employees:", Emplyees);
       res.send(result);
     });
 
-    app.get("/Emplyees", async (req, res) => {
-      const result = await usersCollection.find().limit(20).toArray();
+    app.get("/employees", async (req, res) => {
+      const result = await EmplyeesCollection.find().toArray();
       res.send(result);
     });
 
@@ -134,7 +134,7 @@ async function run() {
 
 
     app.get("/filesPdf", async (req, res) => {
-      const result = await FilesCollection.find().toArray();
+      const result = await filesPdfCollection.find().toArray();
       res.send(result);
     });
 

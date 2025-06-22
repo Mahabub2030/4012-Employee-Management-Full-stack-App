@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async'
-import Rooms from '../../components/Home/Room'
 import Table from '../../components/Home/Table'
 
 const Home = () => {

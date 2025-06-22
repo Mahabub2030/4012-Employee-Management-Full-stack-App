@@ -12,6 +12,7 @@ import Profile from "../pages/Dashboard/Common/Profile";
 import Statistics from "../pages/Dashboard/Common/Statistics";
 import MainLayout from "../layouts/MainLayout";
 import Files from "../components/Dashboard/Sidebar/Files";
+import FilesPdf from "../components/Dashboard/Sidebar/FIlesPdf";
 
 
 
