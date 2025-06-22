@@ -13,6 +13,7 @@ import Statistics from "../pages/Dashboard/Common/Statistics";
 import MainLayout from "../layouts/MainLayout";
 import Files from "../components/Dashboard/Sidebar/Files";
 import FilesPdf from "../components/Dashboard/Sidebar/FIlesPdf";
+import AddEmployees from "../components/Dashboard/Sidebar/AddEmployees";
 
 
 
@@ -61,6 +62,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
           <Files/>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "addEmployee",
+        element: (
+          <PrivateRoute>
+         <AddEmployees/>
           </PrivateRoute>
         ),
       },

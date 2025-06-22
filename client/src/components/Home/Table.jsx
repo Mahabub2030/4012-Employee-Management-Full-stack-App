@@ -40,7 +40,6 @@ const Table = () => {
                   <th>Joining Date</th>
                   <th>Work Location</th>
                   <th>Work Status</th>
-                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -59,12 +58,6 @@ const Table = () => {
                     <td>{employe.joining}</td>
                     <td>{employe.workLocation}</td>
                     <td>{employe.workStatus}</td>
-                    <td className="">
-                      <div className="justify-between ">
-                        <button className="bg-red-400 mr-5">X</button>
-                        <button className="bg-red-400">X</button>
-                      </div>
-                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -82,7 +75,6 @@ const Table = () => {
                   <th>Joining Date</th>
                   <th>Work Location</th>
                   <th>Work Status</th>
-                  <th>Action</th>
                 </tr>
               </tfoot>
             </table>
