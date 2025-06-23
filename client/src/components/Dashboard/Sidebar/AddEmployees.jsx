@@ -1,6 +1,5 @@
 const AddEmployees = () => {
-
-
+  
     return (
       <div className="w-full min-h-[calc(100vh-40px)] flex flex-col justify-center items-center text-gray-800 rounded-xl bg-gray-50">
         <form>
@@ -11,7 +10,7 @@ const AddEmployees = () => {
                   Employe Name
                 </label>
                 <input
-                  className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
+                  className="w-full px-4 py-3 text-white border border-rose-300 focus:outline-rose-500 rounded-md "
                   name="name"
                   id="name"
                   type="text"
@@ -24,7 +23,7 @@ const AddEmployees = () => {
                   Position
                 </label>
                 <input
-                  className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
+                  className="w-full px-4 py-3 text-white  border border-rose-300 focus:outline-rose-500 rounded-md "
                   name="Position"
                   id="Position"
                   type="text"
@@ -37,7 +36,7 @@ const AddEmployees = () => {
                   DACO ID
                 </label>
                 <input
-                  className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
+                  className="w-full px-4 py-3 text-white  border border-rose-300 focus:outline-rose-500 rounded-md "
                   name="DACOID"
                   id="DACOID"
                   type="text"
@@ -58,7 +57,6 @@ const AddEmployees = () => {
                   required
                 />
               </div>
-
               <div className="space-y-1 text-sm">
                 <label htmlFor="group" className="block text-gray-600">
                   Group
@@ -69,7 +67,6 @@ const AddEmployees = () => {
                   name="group"
                 ></select>
               </div>
-
               <div className="space-y-1">
                 <label htmlFor="location" className="block text-gray-600">
                   Select Availability Range
@@ -83,7 +80,7 @@ const AddEmployees = () => {
                   Title
                 </label>
                 <input
-                  className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
+                  className="w-full px-4 py-3 text-white border border-rose-300 focus:outline-rose-500 rounded-md "
                   name="title"
                   id="title"
                   type="text"
@@ -93,7 +90,8 @@ const AddEmployees = () => {
               </div>
 
               <div className=" p-4 bg-white w-full  m-auto rounded-lg">
-                <div className="file_upload px-5 py-3 relative border-4 border-dotted border-gray-300 rounded-lg">
+                {/* imge section here */}
+                {/* <div className="file_upload px-5 py-3 relative border-4 border-dotted border-gray-300 rounded-lg">
                   <div className="flex flex-col w-max mx-auto text-center">
                     <label>
                       <input
@@ -109,33 +107,33 @@ const AddEmployees = () => {
                       </div>
                     </label>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="flex justify-between gap-2">
                 <div className="space-y-1 text-sm">
                   <label htmlFor="price" className="block text-gray-600">
-                    Price
+                    Iqama Number
                   </label>
                   <input
-                    className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
-                    name="price"
-                    id="price"
+                    className="w-full px-4 py-3 text-white border border-rose-300 focus:outline-rose-500 rounded-md "
+                    name="IqamaNumber"
+                    id="Iqama Number"
                     type="number"
-                    placeholder="Price"
+                    placeholder="Iqama Number"
                     required
                   />
                 </div>
 
                 <div className="space-y-1 text-sm">
-                  <label htmlFor="guest" className="block text-gray-600">
-                    Total guest
+                  <label htmlFor="Mobile" className="block text-gray-600">
+                    Mobile
                   </label>
                   <input
-                    className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
-                    name="total_guest"
-                    id="guest"
+                    className="w-full px-4 py-3 text-white border border-rose-300 focus:outline-rose-500 rounded-md "
+                    name="Mobile"
+                    id="Mobile"
                     type="number"
-                    placeholder="Total guest"
+                    placeholder="Mobile"
                     required
                   />
                 </div>
@@ -143,44 +141,32 @@ const AddEmployees = () => {
 
               <div className="flex justify-between gap-2">
                 <div className="space-y-1 text-sm">
-                  <label htmlFor="bedrooms" className="block text-gray-600">
-                    Bedrooms
+                  <label htmlFor="Email" className="block text-gray-600">
+                    Email
                   </label>
                   <input
-                    className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
-                    name="bedrooms"
-                    id="bedrooms"
-                    type="number"
-                    placeholder="Bedrooms"
+                    className="w-full px-4 py-3 text-white border border-rose-300 focus:outline-rose-500 rounded-md "
+                    name="Email"
+                    id="Email"
+                    type="Email"
+                    placeholder="Email"
                     required
                   />
                 </div>
 
                 <div className="space-y-1 text-sm">
-                  <label htmlFor="bathrooms" className="block text-gray-600">
-                    Bathrooms
+                  <label htmlFor="	Nationality" className="block text-gray-600">
+                    Nationality
                   </label>
                   <input
-                    className="w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md "
-                    name="bathrooms"
-                    id="bathrooms"
-                    type="number"
-                    placeholder="Bathrooms"
+                    className="w-full px-4 py-3 text-white border border-rose-300 focus:outline-rose-500 rounded-md "
+                    name="Nationality"
+                    id="Nationality"
+                    type="text"
+                    placeholder="Nationality"
                     required
                   />
                 </div>
-              </div>
-
-              <div className="space-y-1 text-sm">
-                <label htmlFor="description" className="block text-gray-600">
-                  Description
-                </label>
-
-                <textarea
-                  id="description"
-                  className="block rounded-md focus:rose-300 w-full h-32 px-4 py-3 text-gray-800  border border-rose-300 focus:outline-rose-500 "
-                  name="description"
-                ></textarea>
               </div>
             </div>
           </div>
