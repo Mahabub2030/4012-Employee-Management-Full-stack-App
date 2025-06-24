@@ -14,6 +14,7 @@ import MainLayout from "../layouts/MainLayout";
 import Files from "../components/Dashboard/Sidebar/Files";
 import FilesPdf from "../components/Dashboard/Sidebar/FIlesPdf";
 import AddEmployees from "../components/Dashboard/Sidebar/AddEmployees";
+import IdTable from "../components/Dashboard/Sidebar/IdTable";
 
 
 
@@ -61,7 +62,7 @@ export const router = createBrowserRouter([
         path: "Files",
         element: (
           <PrivateRoute>
-          <Files/>
+            <Files />
           </PrivateRoute>
         ),
       },
@@ -69,7 +70,15 @@ export const router = createBrowserRouter([
         path: "addEmployee",
         element: (
           <PrivateRoute>
-         <AddEmployees/>
+            <AddEmployees />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "Id-Table",
+        element: (
+          <PrivateRoute>
+           <IdTable/>
           </PrivateRoute>
         ),
       },
